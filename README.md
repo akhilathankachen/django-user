@@ -111,4 +111,4 @@
 
 > Demo Video
 
-![Demo Video]()
+![Demo Video](https://github.com/am791/user-management-api/blob/master/demoVideo/demo_video.webm)
