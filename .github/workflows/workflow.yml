@@ -19,7 +19,7 @@ jobs:
         uses: actions/Checkout@v2.3.1
 
       - name: Install and build
-        run: npm install && npm run build
+        run: npm install && CI='' npm run build
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v1
