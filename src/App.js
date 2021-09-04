@@ -57,7 +57,7 @@ const deleteUser = e => {
     var dum;
     var existingUsers = userInfos;
     for(let x in existingUsers){
-      if(existingUsers[x]['email'] == email2){
+      if(existingUsers[x]['email'] === email2){
         temp=true;
         dum=x;
         break;
