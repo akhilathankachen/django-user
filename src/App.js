@@ -1,4 +1,4 @@
-import './stylesheets/Main.css';
+import './stylsheets/Main.css';
 import {React, useState, useEffect} from 'react';
 import axios from 'axios';
 import { Card } from '@material-ui/core';
@@ -39,8 +39,7 @@ export default function App(){
   const fetchDataDynamically = () => {
    return  fetchRandomData().then((randomData)=>{
       setUserInfos(randomData);
-      console.log(JSON.stringify(randomData, null,2));
-      alert("Data Re-fetched Successfully");
+      alert("Data Fetched Successfully");
   });
   }
 
@@ -51,31 +50,34 @@ const deleteUser = e => {
     body: JSON.stringify({email2}),
   })
   .then((response)=>{
-    alert(response.json());
-    return fetchRandomData().then((randomData)=>{
-      setUserInfos(randomData);
-    });
-    /*
-    if(email2=='') return alert("Please enter Email of the user to delete.");
+      return response.json(); 
+  })
+  .then((Response)=>{
     var temp = false;
+    var dum;
     var existingUsers = userInfos;
     for(let x in existingUsers){
       if(existingUsers[x]['email'] == email2){
         temp=true;
+        dum=x;
         break;
     }
     }
     
     if(temp){
       return fetchRandomData().then((randomData)=>{
-        console.log(JSON.stringify(randomData, null, 2));
+        randomData.splice(dum,1);
         setUserInfos(randomData);
-        alert("User deleted successfully.");
+        var res = {"status": "Deleted", "message": "User deleted successfully."};
+        alert(JSON.stringify(res, null,2));
       });
     }
     else {
-      alert("Unable to delete the user or user may not exist.");
-    } */
+      alert(JSON.stringify(Response, null,2));
+    } 
+    fetchRandomData().then((randomData)=>{
+      setUserInfos(randomData);
+    });
   })
   .catch(()=>alert("There was an error"));
 }  
@@ -87,27 +89,14 @@ const submit = e => {
     body: JSON.stringify({ email, fist_name, last_name, pwd, username }),
   })
   .then((response)=> {
-    alert(response.json());
-    return fetchRandomData().then((randomData)=>{
-      setUserInfos(randomData);
-      
-    });
+    return response.json();
 
-    /*if(email=='' || fist_name=='' || pwd=='' || username=='')  return alert("Please fill all the mandatory fields to add a new user.");
-    var temp = true;
-    var existingUsers = userInfos;
-    for(let x in existingUsers){
-        if(existingUsers[x]['email'] == email || existingUsers[x]['username']== username)
-          temp=false; 
-    }
-    if(temp){
+  })
+  .then((Response)=>{
+    alert(JSON.stringify(Response, null, 2));
     return fetchRandomData().then((randomData)=>{
       setUserInfos(randomData);
-      alert(response[0]);
-    });}
-    else{
-      alert(response[0]);
-    }    */
+    });
   })
   .catch(()=>alert("There was an error"));
   }
