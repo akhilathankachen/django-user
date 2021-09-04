@@ -21,10 +21,6 @@ jobs:
       - name: Install and build
         run: npm install && npm run build
 
-      - name: Install rsync
-        run: |
-          npm update && npm install -y rsync
-
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
