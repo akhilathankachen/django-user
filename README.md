@@ -9,13 +9,13 @@
 ## APIs for above requirements
 - Fetch All Registered users 
 
-  API: "http://15.207.229.231:8000/machstatz/get_all_users"
+  API: "http://3.6.93.159:7883/machstatz/get_all_users"
   
   Use this API to fetch all the registered user.
 
 - Add New User
  
-  API: "http://15.207.229.231:8000/machstatz/add_new_user"
+  API: "http://3.6.93.159:7883/machstatz/add_new_user"
   
   Use this to create new User
   
@@ -62,7 +62,7 @@
 
 - Delete Existing User
 
-  API: "http://15.207.229.231:8000/machstatz/delete_existing_user"
+  API: "http://3.6.93.159:7883/machstatz/delete_existing_user"
   
   Use this API to delete the existing user
   
