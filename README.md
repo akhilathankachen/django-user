@@ -97,8 +97,8 @@
       }
 
 
-### How to run the project:
-- Clone the project.
+### How to run the project on Local:
+- Clone the project - master branch.
 - Open the Command prompt(cmd) and set the directory to the cloned project. Run the command: 
   ``` npm install ```
   The above command will download all the node modules required for the project to run.
@@ -106,6 +106,7 @@
   ``` npm start ```
   The above command will run the software on a localhost.
 - Use the provided localhost link in any browser.
+- NOTE: gh-pages branch is included to deploy it on gh-pages
 
 ## Video Demo of the Project-Assignmemnt
 
