@@ -111,4 +111,5 @@
 
 > Demo Video
 
-![Demo Video](https://github.com/am791/user-management-api/blob/master/demoVideo/demo_video.webm)
+
+> [![Watch the video](https://img.youtube.com/vi/b4o7LtrRspU/maxresdefault.jpg)](https://youtu.be/b4o7LtrRspU)
